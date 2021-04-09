@@ -18,6 +18,7 @@ import {
   NativeModules,
   Button,
   View,
+  requireNativeComponent,
 } from 'react-native';
 
 import {
@@ -54,10 +55,11 @@ const Section = ({children, title}): Node => {
   );
 };
 const helloWorldModule = NativeModules.HelloWorld;
+const HelloView = requireNativeComponent('HelloView');
 
 const App: () => Node = () => {
   const isDarkMode = useColorScheme() === 'dark';
-  const [infoText, setInfoText] = useState(1);
+  const [infoText, setInfoText] = useState(11);
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
@@ -69,7 +71,7 @@ const App: () => Node = () => {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
-        <Header />
+        <HelloView style={{height: 100, width: 100}} />
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
@@ -108,6 +110,17 @@ const App: () => Node = () => {
                     alert('Negative');
                     console.log(e);
                   });
+              }}
+            />
+          </Section>
+          <Section title="Step Five">
+            <Button
+              title="Do Liveness"
+              onPress={() => {
+                helloWorldModule.doLiveness(value => {
+                  console.log(value);
+                  alert(value);
+                });
               }}
             />
           </Section>

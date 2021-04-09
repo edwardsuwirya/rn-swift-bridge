@@ -14,4 +14,5 @@ RCT_EXTERN_METHOD(sayHi)
 RCT_EXTERN_METHOD(sayMyName: String)
 RCT_EXTERN_METHOD(counter: (RCTResponseSenderBlock)callback)
 RCT_EXTERN_METHOD(counterPromise: (RCTPromiseResolveBlock)resolve rejecter: (RCTPromiseRejectBlock)reject)
+RCT_EXTERN_METHOD(doLiveness: (RCTResponseSenderBlock)callback)
 @end

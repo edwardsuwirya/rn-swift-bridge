@@ -14,6 +14,11 @@
 		47A783FDD5F7154001475FFA /* libPods-HelloSwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA4FCCAA0A41109CDF7B222B /* libPods-HelloSwift.a */; };
 		5025AB5D261EEEBF006AF59D /* HelloWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5025AB5C261EEEBF006AF59D /* HelloWorld.swift */; };
 		5025AB61261EEFF1006AF59D /* HelloWorldModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 5025AB60261EEFF1006AF59D /* HelloWorldModule.m */; };
+		50FEF5FB2620350F009A06D1 /* HelloViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FEF5FA2620350F009A06D1 /* HelloViewManager.swift */; };
+		50FEF5FF262035ED009A06D1 /* HelloViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 50FEF5FE262035ED009A06D1 /* HelloViewManager.m */; };
+		50FEF6032620387F009A06D1 /* MGFaceIDLiveCustomDetect.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 50FEF6022620387F009A06D1 /* MGFaceIDLiveCustomDetect.bundle */; };
+		50FEF60A26203894009A06D1 /* PrivyLiveness_ObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50FEF6062620388A009A06D1 /* PrivyLiveness_ObjC.framework */; };
+		50FEF60B26203894009A06D1 /* PrivyLiveness_ObjC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50FEF6062620388A009A06D1 /* PrivyLiveness_ObjC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		C4DF592154C87B745F86FF90 /* libPods-HelloSwift-HelloSwiftTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4E3347C13BCFA71BF72CFFA /* libPods-HelloSwift-HelloSwiftTests.a */; };
 /* End PBXBuildFile section */
@@ -28,6 +33,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		50FEF60C26203894009A06D1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				50FEF60B26203894009A06D1 /* PrivyLiveness_ObjC.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		00E356EE1AD99517003FC87E /* HelloSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,6 +60,10 @@
 		5025AB5B261EEEBF006AF59D /* HelloSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HelloSwift-Bridging-Header.h"; sourceTree = "<group>"; };
 		5025AB5C261EEEBF006AF59D /* HelloWorld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloWorld.swift; sourceTree = "<group>"; };
 		5025AB60261EEFF1006AF59D /* HelloWorldModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldModule.m; sourceTree = "<group>"; };
+		50FEF5FA2620350F009A06D1 /* HelloViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloViewManager.swift; sourceTree = "<group>"; };
+		50FEF5FE262035ED009A06D1 /* HelloViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloViewManager.m; sourceTree = "<group>"; };
+		50FEF6022620387F009A06D1 /* MGFaceIDLiveCustomDetect.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MGFaceIDLiveCustomDetect.bundle; sourceTree = "<group>"; };
+		50FEF6062620388A009A06D1 /* PrivyLiveness_ObjC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PrivyLiveness_ObjC.framework; sourceTree = "<group>"; };
 		6780AF6D903F381E3FD9857D /* Pods-HelloSwift-HelloSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloSwift-HelloSwiftTests.release.xcconfig"; path = "Target Support Files/Pods-HelloSwift-HelloSwiftTests/Pods-HelloSwift-HelloSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
 		7BFBCA422C72644C59A546C8 /* Pods-HelloSwift-HelloSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloSwift-HelloSwiftTests.debug.xcconfig"; path = "Target Support Files/Pods-HelloSwift-HelloSwiftTests/Pods-HelloSwift-HelloSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = HelloSwift/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50FEF60A26203894009A06D1 /* PrivyLiveness_ObjC.framework in Frameworks */,
 				47A783FDD5F7154001475FFA /* libPods-HelloSwift.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -100,6 +124,8 @@
 				5025AB5C261EEEBF006AF59D /* HelloWorld.swift */,
 				5025AB5B261EEEBF006AF59D /* HelloSwift-Bridging-Header.h */,
 				5025AB60261EEFF1006AF59D /* HelloWorldModule.m */,
+				50FEF5FA2620350F009A06D1 /* HelloViewManager.swift */,
+				50FEF5FE262035ED009A06D1 /* HelloViewManager.m */,
 			);
 			name = HelloSwift;
 			sourceTree = "<group>";
@@ -107,6 +133,8 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				50FEF6062620388A009A06D1 /* PrivyLiveness_ObjC.framework */,
+				50FEF6022620387F009A06D1 /* MGFaceIDLiveCustomDetect.bundle */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				AA4FCCAA0A41109CDF7B222B /* libPods-HelloSwift.a */,
 				F4E3347C13BCFA71BF72CFFA /* libPods-HelloSwift-HelloSwiftTests.a */,
@@ -192,6 +220,7 @@
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				68D7FEBC0FDE6064DB96663F /* [CP] Embed Pods Frameworks */,
 				A1A27AF1CFD11CEEC2EF505E /* [CP] Copy Pods Resources */,
+				50FEF60C26203894009A06D1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -251,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				50FEF6032620387F009A06D1 /* MGFaceIDLiveCustomDetect.bundle in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,7 +449,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				50FEF5FB2620350F009A06D1 /* HelloViewManager.swift in Sources */,
 				5025AB5D261EEEBF006AF59D /* HelloWorld.swift in Sources */,
+				50FEF5FF262035ED009A06D1 /* HelloViewManager.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				5025AB61261EEFF1006AF59D /* HelloWorldModule.m in Sources */,
 			);
@@ -498,6 +530,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D9S6W56224;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = HelloSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -508,7 +544,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = info.mylabstudio.IOSReactTutorial;
 				PRODUCT_NAME = HelloSwift;
 				SWIFT_OBJC_BRIDGING_HEADER = "HelloSwift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -525,6 +561,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D9S6W56224;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = HelloSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -535,7 +575,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = info.mylabstudio.IOSReactTutorial;
 				PRODUCT_NAME = HelloSwift;
 				SWIFT_OBJC_BRIDGING_HEADER = "HelloSwift-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

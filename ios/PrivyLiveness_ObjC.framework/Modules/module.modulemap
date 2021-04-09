@@ -1,0 +1,6 @@
+framework module PrivyLiveness_ObjC {
+  umbrella header "PrivyLiveness_ObjC.h"
+
+  export *
+  module * { export * }
+}

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import PrivyLiveness_ObjC
 
 @objc(HelloWorld)
 class HelloWorld:NSObject{
@@ -43,6 +44,17 @@ class HelloWorld:NSObject{
       resolve(count)
     }
   }
+  
+  @objc
+  func doLiveness(_ callback: @escaping RCTResponseSenderBlock){
+    let liveness = Liveness(apiKey: "_bYvreG6p02BotOam5YZcBkrz_qDwhuk", secretKey: "S66KAQzbwhrBUQ6rePNaoAj7iutYS9Id", imageRef: UIImage(named: "kk")!)
+    liveness.start({ (data) in
+      callback([">>> success liveness"])
+    }, failure: { (code, error) in
+      callback([">>> error liveness"])
+    })
+  }
+  
   @objc
   static func requiresMainQueueSetup() -> Bool{
     return true
