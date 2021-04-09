@@ -9,6 +9,7 @@
 #import "React/RCTBridgeModule.h"
 
 @interface RCT_EXTERN_MODULE(HelloWorld,NSObject)
+RCT_EXTERN_METHOD(setInitialCount: NSNumber)
 RCT_EXTERN_METHOD(sayHi)
 RCT_EXTERN_METHOD(sayMyName: String)
 RCT_EXTERN_METHOD(counter: (RCTResponseSenderBlock)callback)

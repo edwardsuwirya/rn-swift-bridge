@@ -53,14 +53,16 @@ const Section = ({children, title}): Node => {
     </View>
   );
 };
+const helloWorldModule = NativeModules.HelloWorld;
 
 const App: () => Node = () => {
   const isDarkMode = useColorScheme() === 'dark';
-  const [infoText, setInfoText] = useState('0');
+  const [infoText, setInfoText] = useState(1);
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
+  helloWorldModule.setInitialCount(infoText);
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
@@ -73,23 +75,21 @@ const App: () => Node = () => {
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
           <Section title="Step One">
-            <Button
-              title="Say Hi"
-              onPress={() => NativeModules.HelloWorld.sayHi()}
-            />
+            <Button title="Say Hi" onPress={() => helloWorldModule.sayHi()} />
           </Section>
           <Section title="Step Two">
             <Button
               title="Say My Name"
-              onPress={() => NativeModules.HelloWorld.sayMyName('BAF')}
+              onPress={() => helloWorldModule.sayMyName('BAF')}
             />
           </Section>
           <Section title="Step Three">
             <Button
               title="Counter"
               onPress={() => {
-                NativeModules.HelloWorld.counter(value => {
+                helloWorldModule.counter(value => {
                   setInfoText(value);
+                  console.log(value);
                 });
               }}
             />
@@ -99,7 +99,8 @@ const App: () => Node = () => {
             <Button
               title="Counter Promise"
               onPress={() => {
-                NativeModules.HelloWorld.counterPromise()
+                helloWorldModule
+                  .counterPromise()
                   .then(res => {
                     setInfoText(res);
                   })

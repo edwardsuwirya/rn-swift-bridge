@@ -12,6 +12,11 @@ class HelloWorld:NSObject{
   private var count = 0
   
   @objc
+  func setInitialCount(_ initCount:NSNumber){
+    count = initCount as! Int
+  }
+  
+  @objc
   func sayHi(){
     print("Hello World")
   }
@@ -23,8 +28,9 @@ class HelloWorld:NSObject{
   
   @objc
   func counter(_ callback: RCTResponseSenderBlock){
+    print(count)
     count += 1
-    callback([String(count)])
+    callback([count])
   }
   
   @objc
